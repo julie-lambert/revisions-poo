@@ -11,8 +11,7 @@ class Product{
     private ?DateTime $createdAt;
     private ?DateTime $updatedAt;
     private ?int $category_id;
-    private $db;
-    
+
     public function __construct($id = null, $name = null, $photos = null, $price = null, $description = null, $quantity= null, $createdAt = null, $updatedAt = null, $category_id= null)
     {
         $this->id = $id;
@@ -148,8 +147,6 @@ class Product{
 
         return $this;
     }
-
-  
 }
 
 
