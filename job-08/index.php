@@ -25,11 +25,10 @@ $product = new Product();
 
 $product -> setDb($db);
 
+$result= $product->findAll();
 
-$products = $product->findOneById(10);
+var_dump($result)
 
-
-var_dump($products);
 
 
 
