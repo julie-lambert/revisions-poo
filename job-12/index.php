@@ -1,6 +1,8 @@
 <?php
 
-require_once 'Product.php';
+// require_once 'Product.php';
+require_once 'Clothing.php';
+require_once 'Electronic.php';
 require_once 'Category.php';
 
 //$category = new Category(1,'T-shirt',  'A beatiful T-shirt',  new DateTime(), new DateTime());
@@ -20,22 +22,33 @@ try {
             die('Erreur:' . $e->getMessage());
         }
         
-$product = new Product(null,'Short', ['https://picsum.photos/200/300'], 1000, 'A beatiful Short', 10, new DateTime(), new DateTime(),1);
+
 
 
 $product -> setDb($db);
 
+$clothing = new Clothing();
+$electronic = new Electronic();
 
-$product -> create();
+// findOneById -------------------------
+// $newClothing = $clothing->findOneById(1);
+// $newElectronic = $electronic->findOneById(3);
+
+// findAll -------------------------
+// $newClothing = $clothing->findAll();
+// $newElectronic = $electronic->findAll();
+
+// create -------------------------
+// $clothing->create();
+// $electronic->create();
+
+// update -------------------------
+// $clothing->update();
+// $electronic->update();
 
 
-var_dump($product);
-
-$product -> setName('Shorty');
-
-$product -> update();
-
-var_dump($product);
+// var_dump($newClothing);
+// var_dump($newElectronic);
 
 
 
